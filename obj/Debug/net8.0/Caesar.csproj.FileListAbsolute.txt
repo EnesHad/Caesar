@@ -12,3 +12,17 @@ C:\Users\Enes\source\repos\Caesar\obj\Debug\net8.0\refint\Caesar.dll
 C:\Users\Enes\source\repos\Caesar\obj\Debug\net8.0\Caesar.pdb
 C:\Users\Enes\source\repos\Caesar\obj\Debug\net8.0\Caesar.genruntimeconfig.cache
 C:\Users\Enes\source\repos\Caesar\obj\Debug\net8.0\ref\Caesar.dll
+C:\Users\b35\Desktop\Caesar-main\bin\Debug\net8.0\Caesar.exe
+C:\Users\b35\Desktop\Caesar-main\bin\Debug\net8.0\Caesar.deps.json
+C:\Users\b35\Desktop\Caesar-main\bin\Debug\net8.0\Caesar.runtimeconfig.json
+C:\Users\b35\Desktop\Caesar-main\bin\Debug\net8.0\Caesar.dll
+C:\Users\b35\Desktop\Caesar-main\bin\Debug\net8.0\Caesar.pdb
+C:\Users\b35\Desktop\Caesar-main\obj\Debug\net8.0\Caesar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\b35\Desktop\Caesar-main\obj\Debug\net8.0\Caesar.AssemblyInfoInputs.cache
+C:\Users\b35\Desktop\Caesar-main\obj\Debug\net8.0\Caesar.AssemblyInfo.cs
+C:\Users\b35\Desktop\Caesar-main\obj\Debug\net8.0\Caesar.csproj.CoreCompileInputs.cache
+C:\Users\b35\Desktop\Caesar-main\obj\Debug\net8.0\Caesar.dll
+C:\Users\b35\Desktop\Caesar-main\obj\Debug\net8.0\refint\Caesar.dll
+C:\Users\b35\Desktop\Caesar-main\obj\Debug\net8.0\Caesar.pdb
+C:\Users\b35\Desktop\Caesar-main\obj\Debug\net8.0\Caesar.genruntimeconfig.cache
+C:\Users\b35\Desktop\Caesar-main\obj\Debug\net8.0\ref\Caesar.dll
