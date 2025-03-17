@@ -20,21 +20,26 @@ namespace Caesar
         int vsotaZamika = 0;
 
 
-        public string encript(string niz, int zamik) {
-            //niz = niz.ToUpper();
+        public string encript(string niz, int zamik, int dim) {
             for (int i = 0; i < niz.Length; i++)
             {
                 c = niz[i];
+
+                if (Char.IsSymbol(c) || Char.IsPunctuation(c)) { en = en + c; continue; }
+                if (Char.IsNumber(c)) { en = en + c;  continue; }
                 if (Char.IsWhiteSpace(c)) { en = en + space; continue; }
                 b = Char.IsUpper(c);
                 if ( b == true) {
-                    for (int k = 0; k <= 25; k++)
+                    for (int k = 0; k < 25; k++)
                     {
                         if (c == abcV[k])
                         {
-                            vsotaZamika = k + zamik + 1;
-                            if (vsotaZamika > 25) vsotaZamika -= 25;
+                            vsotaZamika = k +1 + zamik + dim;
+                            while (vsotaZamika >= 25 ) { 
+                                vsotaZamika -= 25;
+                            }
                             en = en + abcV[vsotaZamika];
+                            dim =dim + 2;
                             break;
                         }
                     }
@@ -46,9 +51,15 @@ namespace Caesar
                     {
                         if (c == abcM[k])
                         {
-                            vsotaZamika = k + zamik + 1;
-                            if (vsotaZamika > 25) vsotaZamika -= 25;
+                            vsotaZamika = k + zamik + 1 + dim;
+                            while (vsotaZamika >= 25)
+                            {
+                                vsotaZamika -= 25;
+                                //Console.WriteLine(vsotaZamika);
+                            }
+                            //Console.WriteLine("neki je prou "+vsotaZamika);
                             en = en + abcM[vsotaZamika];
+                            dim =dim + 2;
                             break;
                         }
                     }
@@ -59,22 +70,27 @@ namespace Caesar
 
         }
 
-        public string decode(string niz, int zamik) {
-            //niz = niz.ToUpper();
+        public string decode(string niz, int zamik, int dim) {
             for (int i = 0; i < niz.Length; i++)
             {
                 c = niz[i];
+                if (Char.IsSymbol(c) || Char.IsPunctuation(c)) { de = de + c; continue; }
+                if (Char.IsNumber(c)) { de = de + c; continue; }
                 if (Char.IsWhiteSpace(c)) { de = de + space; continue; }
                 l = Char.IsUpper(c);
                 if (l == true)
                 {
-                    for (int k = 0; k <= 25; k++)
+                    for (int k = 0; k < 25; k++)
                     {
                         if (c == abcV[k])
                         {
-                            vsotaZamika = (k - zamik) - 1;
-                            if (vsotaZamika < 0) vsotaZamika += 25;
+                            vsotaZamika = (k - zamik) - (1 + dim);
+                            while (vsotaZamika < 0)
+                            {
+                                vsotaZamika += 25;
+                            }
                             de = de + abcV[vsotaZamika];
+                            dim =dim + 2;
                             break;
                         }
                     }
@@ -82,13 +98,17 @@ namespace Caesar
 
                 }
                 else { 
-                 for (int k = 0; k <= 25; k++)
+                 for (int k = 0; k < 25; k++)
                     {
                         if (c == abcM[k])
                         {
-                            vsotaZamika = (k - zamik) - 1;
-                            if (vsotaZamika < 0) vsotaZamika += 25;
+                            vsotaZamika = (k - zamik) - (1 + dim);
+                            while (vsotaZamika < 0)
+                            {
+                                vsotaZamika += 25;
+                            }
                             de = de + abcM[vsotaZamika];
+                            dim =dim + 2;
                             break;
                         }
                     }
